@@ -41,5 +41,10 @@ void Image::write_raw(std::string& out_fname)
 
 void Image::invert()
 {
-  return;
+  for(int i = 0; i < W*H; i++)
+  {
+    imgbuf[i] = 0xff-imgbuf[i];
+  }
+
 }
+
